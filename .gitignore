@@ -1,0 +1,10 @@
+.DS_Store
+prototype/preview.html
+prototype/checks/
+__pycache__/
+prototype/run.html
+prototype/memo-sky.html
+prototype/memo-reminder-demo.html
+prototype/memo-fullscreen-reminder.html
+assets/reference.png
+dist/
