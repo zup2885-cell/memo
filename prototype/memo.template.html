@@ -1,0 +1,108 @@
+<style>
+__MEMO_CSS__
+</style>
+<div id="memo-sky" aria-label="Memo 天空与麦田主题原型">
+  <div class="memo-previewbar">
+    <span class="memo-previewlabel"><span></span> 交互原型 · 自启与提醒为演示</span>
+    <div class="memo-previewactions">
+      <button type="button" class="memo-button memo-quiet cursor-interaction" data-action="replay-opening" aria-label="重播打开动画"><i data-lucide="play" aria-hidden="true"></i>打开动画</button>
+      <button type="button" class="memo-button memo-quiet cursor-interaction" data-action="preview-reminder"><i data-lucide="bell-ring" aria-hidden="true"></i>预览提醒</button>
+      <button type="button" class="memo-button memo-quiet cursor-interaction" data-action="simulate-login"><i data-lucide="power" aria-hidden="true"></i>模拟登录</button>
+    </div>
+  </div>
+  <div class="memo-stage">
+    <div class="memo-launchscreen" aria-hidden="true" hidden>
+      <div class="memo-launchscenery"></div>
+      <div class="memo-launchatmosphere"><span></span><span></span><span></span></div>
+      <div class="memo-launchbrand"><span class="memo-launchmark"><i data-lucide="notebook-pen" aria-hidden="true"></i></span><strong>Memo</strong><span class="memo-launchcaption">让日常轻一点</span><div class="memo-launchpicture"></div><span class="memo-launchglow"></span></div>
+    </div>
+    <div class="memo-background">
+      <div class="memo-menubar">
+        <div class="memo-menuleft"><span class="memo-systemmark" aria-hidden="true">●</span><strong>Memo</strong><span class="memo-menustatus">记录生活的每一小格</span></div>
+        <div class="memo-menuright">
+          <div class="memo-traywrap">
+            <button type="button" class="memo-tray cursor-interaction" aria-label="Memo 菜单栏" aria-expanded="false" data-action="toggle-tray"><i data-lucide="notebook-pen" aria-hidden="true"></i><span class="memo-traydot"></span></button>
+            <div class="memo-traymenu" hidden>
+              <div class="memo-trayheading">Memo <span>后台运行中</span></div>
+              <button type="button" data-action="open-window" class="cursor-interaction"><i data-lucide="panel-top" aria-hidden="true"></i>打开 Memo</button>
+              <button type="button" data-action="new-note" class="cursor-interaction"><i data-lucide="square-pen" aria-hidden="true"></i>新建备忘录</button>
+              <button type="button" data-action="new-event" class="cursor-interaction"><i data-lucide="calendar-plus" aria-hidden="true"></i>添加事件</button>
+              <button type="button" data-action="settings" class="cursor-interaction"><i data-lucide="settings-2" aria-hidden="true"></i>设置</button>
+            </div>
+          </div>
+          <span class="memo-systemdate"></span>
+        </div>
+      </div>
+      <div class="memo-window">
+        <header class="memo-windowbar">
+          <div class="memo-brandgroup">
+            <div class="memo-traffic"><button type="button" class="cursor-interaction" data-action="close-window" aria-label="关闭主窗口，保留菜单栏"></button><span></span><span></span></div>
+            <div class="memo-brand"><i data-lucide="notebook-pen" aria-hidden="true"></i><strong>Memo</strong><span>让日常轻一点</span></div>
+          </div>
+          <div class="memo-toolbar">
+            <label class="memo-search"><i data-lucide="search" aria-hidden="true"></i><input type="search" aria-label="搜索备忘录" placeholder="搜索备忘录"><kbd>⌘ K</kbd></label>
+            <button type="button" class="memo-iconbutton memo-soundentry cursor-interaction" data-action="sound-settings" aria-label="提醒声音与自定义音乐"><i data-lucide="music-2" aria-hidden="true"></i></button>
+            <button type="button" class="memo-iconbutton cursor-interaction" data-action="settings" aria-label="打开设置"><i data-lucide="settings-2" aria-hidden="true"></i></button>
+          </div>
+        </header>
+        <div class="memo-content">
+          <section class="memo-welcome" aria-label="欢迎">
+            <div class="memo-welcometext cursor-interaction"><div class="memo-welcomeheading"><div class="memo-datecaption"></div><button type="button" class="memo-button memo-quiet memo-welcomeedit cursor-interaction" data-action="edit-welcome" aria-label="编辑欢迎区文字"><i data-lucide="square-pen" aria-hidden="true"></i>编辑文字</button></div><h1 class="memo-welcometitle">记录此刻，<br>安排今天<span>。</span></h1><p class="memo-welcomedescription">把灵感留下，把日子慢慢过好。</p><span class="memo-welcomefoot"><i data-lucide="sun" aria-hidden="true"></i><span>每一天，都值得好好记录</span></span></div>
+            <div class="memo-photoblock">
+              <div class="memo-photo">
+                <div class="memo-photomedia"><img src="__MEMO_PHOTO__" alt="蓝天白云下，蓝色露营车停在金色麦田中"></div>
+                <div class="memo-photoactions"><label class="memo-button memo-photochange cursor-interaction"><i data-lucide="image-plus" aria-hidden="true"></i>更换背景<input type="file" class="memo-photoinput cursor-interaction" aria-label="更换背景图片、动图或视频" accept="image/jpeg,image/png,image/webp,image/gif,image/avif,video/mp4,video/webm,video/quicktime,.m4v,.mov"></label><button type="button" class="memo-button memo-photoreset cursor-interaction" data-action="reset-photo" aria-label="恢复天空与麦田图片及配色" hidden><i data-lucide="rotate-ccw" aria-hidden="true"></i></button></div>
+                <button type="button" class="memo-button memo-motiontoggle cursor-interaction" data-action="toggle-motion" hidden>暂停动态画面</button>
+                <span class="memo-photocaption">somewhere, unhurried.</span>
+              </div>
+              <div class="memo-photostatus" role="status" aria-live="polite"><span class="memo-themeswatches" aria-hidden="true"><span></span><span></span><span></span></span><span class="memo-themetext">天空与麦田 · 配色与打开动画随图片、动图和视频变化</span></div>
+            </div>
+          </section>
+          <nav class="memo-mobiletabs" aria-label="主视图"><button type="button" data-action="show-notes" aria-pressed="true" class="cursor-interaction"><i data-lucide="sticky-note" aria-hidden="true"></i>备忘录</button><button type="button" data-action="show-calendar" aria-pressed="false" class="cursor-interaction"><i data-lucide="calendar-days" aria-hidden="true"></i>日历</button></nav>
+          <div class="memo-layout">
+            <section class="memo-notes" aria-label="备忘录">
+              <div class="memo-sectionhead"><h2>随手记</h2><span class="memo-note-count"></span></div>
+              <form class="memo-composer" aria-label="快速记录">
+                <div class="memo-composertypes"><button type="button" class="is-active cursor-interaction" data-action="draft-text" aria-pressed="true"><i data-lucide="align-left" aria-hidden="true"></i>文字</button><button type="button" class="cursor-interaction" data-action="draft-list" aria-pressed="false"><i data-lucide="list-checks" aria-hidden="true"></i>待办清单</button><span>一个想法，也值得留下</span></div>
+                <textarea class="memo-quickcontent" aria-label="备忘录内容" placeholder="此刻在想什么？随手记下来…" maxlength="2400" rows="3"></textarea>
+                <div class="memo-composerbottom"><input class="memo-quicktags" aria-label="备忘录标签，用逗号分隔" placeholder="# 添加标签" maxlength="100"><div class="memo-draftcolors" aria-label="卡片颜色"></div><button type="button" data-action="record-note" class="memo-button memo-primary cursor-interaction"><i data-lucide="plus" aria-hidden="true"></i>记录</button></div>
+                <div class="memo-composererror" role="alert" hidden></div>
+              </form>
+              <div class="memo-filters" aria-label="按标签筛选"></div>
+              <div class="memo-cardgroups"></div>
+            </section>
+            <aside class="memo-calendarpanel" aria-label="日历与事件">
+              <div class="memo-sectionhead"><h2>我的日历</h2><span>给生活一点秩序</span></div>
+              <div class="memo-calendarbox">
+                <div class="memo-monthbar"><h3 class="memo-monthtitle"></h3><div><button type="button" class="memo-iconbutton cursor-interaction" data-action="previous-month" aria-label="上个月"><i data-lucide="chevron-left" aria-hidden="true"></i></button><button type="button" class="memo-todaybutton cursor-interaction" data-action="today">今天</button><button type="button" class="memo-iconbutton cursor-interaction" data-action="next-month" aria-label="下个月"><i data-lucide="chevron-right" aria-hidden="true"></i></button></div></div>
+                <div class="memo-datepicker" role="group" aria-label="快速选择年月日">
+                  <label><span>年</span><select class="cursor-interaction" data-calendar-part="year" aria-label="日历年份"></select></label>
+                  <label><span>月</span><select class="cursor-interaction" data-calendar-part="month" aria-label="日历月份"></select></label>
+                  <label><span>日</span><select class="cursor-interaction" data-calendar-part="day" aria-label="日历日期"></select></label>
+                </div>
+                <div class="memo-weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+                <div class="memo-daygrid" aria-label="选择日期并添加事件"></div>
+                <div class="memo-calendarlegend"><span class="memo-legenddot"></span>有安排的日子<span>点击日期添加事件</span></div>
+                <div class="memo-agendahead"><div><span class="memo-agendacaption">这一天的安排</span><h3 class="memo-agendadate" aria-live="polite"></h3></div><button type="button" class="memo-iconbutton cursor-interaction" data-action="new-event" aria-label="添加当天事件"><i data-lucide="plus" aria-hidden="true"></i></button></div>
+                <div class="memo-agenda"></div>
+              </div>
+              <div class="memo-sidequote"><i data-lucide="cloud-sun" aria-hidden="true"></i><p>安排好要做的事，<br>也留一点时间给自己。</p><span>little plans, lovely days</span></div>
+            </aside>
+          </div>
+          <footer class="memo-windowfooter"><span><span class="memo-save-dot"></span>已暂存于本轮预览</span><span>记录生活，而不只是待办</span></footer>
+        </div>
+      </div>
+      <div class="memo-resting" hidden><i data-lucide="notebook-pen" aria-hidden="true"></i><h2>Memo 在这里，安静待命。</h2><p>主窗口已关闭，菜单栏入口仍在。<br>需要记录时，点击右上角的 Memo 图标。</p><button type="button" class="memo-button memo-primary cursor-interaction" data-action="open-window">打开 Memo</button></div>
+      <div class="memo-stopped" hidden><i data-lucide="power" aria-hidden="true"></i><h2>本次登录未自动启动 Memo</h2><p>“登录时自动启动”已关闭。</p><button type="button" class="memo-button memo-primary cursor-interaction" data-action="open-window">手动打开 Memo</button></div>
+    </div>
+    <div class="memo-overlayhost"></div>
+    <div class="memo-toast" role="status" aria-live="polite" hidden></div>
+    <audio class="memo-audio" preload="metadata" hidden></audio>
+  </div>
+</div>
+<script>
+__MEMO_THEME_JS__
+__MEMO_MEDIA_JS__
+__MEMO_REMINDERS_JS__
+__MEMO_JS__
+</script>
