@@ -57,3 +57,7 @@ node --check prototype/memo.js
 源代码采用 [MIT 许可证](LICENSE)。内置示例照片不属于代码许可范围。
 
 图标使用 [Lucide 0.468.0](https://lucide.dev)，其许可证见 [vendor/LICENSE-lucide](vendor/LICENSE-lucide)。
+
+## Public data boundary
+
+New visitors start with no notes or events. Notes created in a browser are stored on that device; they are not bundled into the public page. Existing local records are preserved.

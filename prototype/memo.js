@@ -32,20 +32,7 @@
   function restoreSound(value={}) {
     return {enabled:value.enabled!==false,preset:['bell','breeze','custom'].includes(value.preset)?value.preset:'bell',volume:Number.isFinite(value.volume)?Math.min(100,Math.max(0,value.volume)):65,duration:[5,10,30].includes(value.duration)?value.duration:10};
   }
-  const initial = () => ({version:1,updatedAt:0,notes:[
-    {id:'n-trip',title:'一些想慢慢实现的小事',type:'text',body:'去没有去过的地方，\n看一场日落，住进山里的小屋。\n不用赶路，只是出发。',tags:['生活'],color:'wheat',pinned:true,created:`${today}T10:30`},
-    {id:'n-idea',title:'给灵感一个停靠的地方',type:'text',body:'有些想法不必马上变成答案。\n先把它们记下来，等某一天，\n它们会慢慢连成一条路。',tags:['灵感'],color:'sky',pinned:true,created:`${today}T09:15`},
-    {id:'n-today',title:'今天，不赶时间',type:'list',body:'',items:[{text:'泡一杯喜欢的咖啡',done:true},{text:'整理桌上的小东西',done:false},{text:'傍晚出去走走',done:false}],tags:['生活'],color:'sage',pinned:false,created:`${today}T08:45`},
-    {id:'n-product',title:'关于新的小工具',type:'text',body:'打开就能记，点一下就能安排。\n让备忘录像桌上的便签一样，\n轻一点，也温暖一点。',tags:['工作','灵感'],color:'sky',pinned:false,created:`${addDays(today,-1)}T16:20`},
-    {id:'n-reading',title:'最近读到的一句话',type:'text',body:'「生活的美，往往藏在那些\n不急于到达的时刻。」\n\n记得给自己留一点空白。',tags:['阅读'],color:'cloud',pinned:false,created:`${addDays(today,-1)}T11:00`},
-    {id:'n-pack',title:'下次出发之前',type:'list',body:'',items:[{text:'相机和备用电池',done:false},{text:'一本还没读完的书',done:false},{text:'把喜欢的歌下载好',done:false}],tags:['生活'],color:'rose',pinned:false,created:`${addDays(today,-2)}T19:10`}
-  ],events:[
-    {id:'e-holiday',title:'给自己放个小假',date:today,allDay:true,start:'09:00',end:'10:00',notes:'今天的节奏，可以慢一点。',reminder:'today9',reminderStatus:'scheduled'},
-    {id:'e-plan',title:'整理下周的计划',date:today,allDay:false,start:'14:00',end:'15:00',notes:'带上备忘录，留一点时间给新的想法。',reminder:'10',reminderStatus:'scheduled'},
-    {id:'e-walk',title:'傍晚出去走走',date:today,allDay:false,start:'17:30',end:'18:00',notes:'去附近的公园，看看今天的天空。',reminder:'30',reminderStatus:'scheduled'},
-    {id:'e-coffee',title:'一起喝杯咖啡',date:addDays(today,2),allDay:false,start:'10:00',end:'11:00',notes:'找个有阳光的靠窗位置。',reminder:'60',reminderStatus:'scheduled'},
-    {id:'e-trip',title:'周末短途出发',date:addDays(today,4),allDay:true,start:'09:00',end:'10:00',notes:'不用走很远，也可以有新的风景。',reminder:'previous9',reminderStatus:'scheduled'}
-  ],autoStart:true,sound:{...soundDefaults},visual:{...visualDefaults},welcome:{...welcomeDefaults},running:true,windowOpen:true,view:'notes',selectedDate:today,month:today.slice(0,7),tag:'all',search:'',draft:{type:'text',content:'',tags:'',color:'cloud'}});
+  const initial = () => ({version:1,updatedAt:0,notes:[],events:[],autoStart:true,sound:{...soundDefaults},visual:{...visualDefaults},welcome:{...welcomeDefaults},running:true,windowOpen:true,view:'notes',selectedDate:today,month:today.slice(0,7),tag:'all',search:'',draft:{type:'text',content:'',tags:'',color:'cloud'}});
   function restore(snapshot) {
     const base=initial();
     const data=snapshot?.privateContent?.memo ?? snapshot?.privateContent;
